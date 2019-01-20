@@ -1,0 +1,15 @@
+Wed, 16 May 2018 22:37:19 root         INFO     page 1: National Gallery
+Wed, 16 May 2018 22:37:33 root         INFO     page 1: National Gallery
+Wed, 16 May 2018 22:37:37 root         INFO     page 2: British Museum
+Wed, 16 May 2018 22:37:40 root         INFO     page 3: V&A - Victoria and Albert Museum
+Wed, 16 May 2018 22:51:48 root         INFO     page 1: National Gallery
+Wed, 16 May 2018 22:52:38 root         INFO     page 1: National Gallery
+Wed, 16 May 2018 22:53:00 root         INFO     page 1: National Gallery
+Wed, 16 May 2018 22:53:43 root         INFO     page 1: National Gallery
+Wed, 16 May 2018 22:53:47 root         INFO     page 2: British Museum
+Wed, 16 May 2018 22:53:50 root         INFO     page 3: V&A - Victoria and Albert Museum
+ Error! at 3 min
+Traceback (most recent call last):
+  File "<ipython-input-16-55968431d217>", line 2, in <module>
+    d
+NameError: name 'd' is not defined

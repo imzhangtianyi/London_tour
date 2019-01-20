@@ -1,0 +1,13 @@
+select name,  count(*) from tieba
+group by name
+order by count desc
+
+SELECT num, name, ROW_NUMBER() OVER (partition BY name ORDER BY num desc) AS rnum
+FROM tieba
+order by members desc
+
+delete from tieba
+where num in (SELECT num
+FROM (SELECT num, name, members, ROW_NUMBER() OVER (partition BY name ORDER BY num desc) AS rnum
+	 FROM tieba) t
+  	WHERE t.rnum > 1);

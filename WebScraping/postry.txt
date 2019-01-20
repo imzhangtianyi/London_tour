@@ -1,0 +1,72 @@
+CREATE TABLE attractions(
+	attraction VARCHAR(255) PRIMARY KEY NOT NULL,
+	review_num VARCHAR(10),
+	address VARCHAR(255),
+	street VARCHAR(50),
+	locality VARCHAR(20),
+	ranking VARCHAR(6),
+	category VARCHAR(255),
+	phone VARCHAR(20),
+	duration VARCHAR(50),
+	hours VARCHAR(255),
+	neighborhood VARCHAR(50),
+	description VARCHAR(255),
+	tags VARCHAR(255))
+    
+    
+CREATE TABLE reviews(
+	userID VARCHAR(50) PRIMARY KEY NOT NULL,
+	user_location VARCHAR(50),
+	user_Contributions VARCHAR(5),
+	user_UpVotes VARCHAR(5),
+	viaMobile VARCHAR(20),
+	review_quote VARCHAR(255),
+	review_content VARCHAR(255))
+    
+    
+CREATE TABLE languages(
+	attraction VARCHAR(255) PRIMARY KEY NOT NULL,
+	English VARCHAR(10),
+	Italian VARCHAR(10),
+	Spanish VARCHAR(10),
+	Portuguese VARCHAR(10),
+	French VARCHAR(10),
+	Japanese VARCHAR(10),
+	Russian VARCHAR(10),
+	German VARCHAR(10),
+	Chinese VARCHAR(10),
+	Dutch VARCHAR(10),
+	Korean VARCHAR(10),
+	Other VARCHAR(10))
+    
+    
+DELETE FROM attractions
+WHERE attraction = 'V&A - Victoria and Albert Museum';
+
+CREATE TABLE a1(
+	attraction TEXT PRIMARY KEY NOT NULL,
+	ranking TEXT,
+	rating TEXT,
+	review_num TEXT,
+	address TEXT,
+	street TEXT,
+	locality TEXT,
+	category TEXT,
+	phone TEXT,
+	duration TEXT,
+	hours TEXT,
+	neighborhood TEXT,
+	description TEXT,
+	tags TEXT,
+	languages TEXT)
+    
+CREATE TABLE r2(
+	num SERIAL PRIMARY KEY NOT NULL,
+	userID TEXT,
+	attraction TEXT,
+	user_location TEXT,
+	user_Contributions TEXT,
+	user_UpVotes TEXT,
+	viaMobile TEXT,
+	review_quote TEXT,
+	review_content TEXT)

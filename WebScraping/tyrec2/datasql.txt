@@ -1,0 +1,47 @@
+CREATE TABLE destination0(
+	num SERIAL PRIMARY KEY NOT NULL,
+	attraction TEXT,
+	ranking TEXT,
+	rating TEXT,
+	review_num TEXT,
+	address TEXT,
+	street TEXT,
+	locality TEXT,
+	category TEXT,
+	phone TEXT,
+	duration TEXT,
+	hours TEXT,
+	neighborhood TEXT,
+	description TEXT,
+	tags TEXT,
+	languages TEXT,
+	sitelink TEXT)
+    
+
+CREATE TABLE review0(
+	num SERIAL PRIMARY KEY NOT NULL,
+	userID TEXT,
+	attraction TEXT,
+	user_location TEXT,
+	user_Contributions TEXT,
+	user_UpVotes TEXT,
+	viaMobile TEXT,
+	review_quote TEXT,
+	review_content TEXT,
+	reviewlink TEXT)
+    
+select * from d0
+where attraction in (select attraction from (SELECT num, attraction, ROW_NUMBER() OVER (partition BY attraction ORDER BY num) AS rnum
+FROM d0) a
+where a.rnum > 1)
+order by attraction
+
+update d0
+set phone = '+44 20 8872 4790'
+where num = 1240
+
+update d0
+set ranking = '#225',rating='4.5',review_num='381'
+where num=
+
+#424
